@@ -6,13 +6,44 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"
+		integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw=="
+		crossorigin="anonymous"></script>
 	<title>Oggetti Studenti</title>
 </head>
 
 <body>
 	<h1>Oggetti Studenti</h1>
 
+
+	<div class="form">
+		<label for="nomeIns">Nome</label>
+		<input type="text" id="nomeIns" name="nomeIns" placeholder="Inserisci nome" required>
+		<label for="nomeIns">Cognome</label>
+		<input type="text" id="nomeIns" name="nomeIns" placeholder="Inserisci cognome" required>
+		<label for="nomeIns">Età</label>
+		<input type="text" id="nomeIns" name="nomeIns" placeholder="Inserisci eta" required>
+
+		<button id="inserisci">Inserisci nuovo</button>
+	</div>
+
+
+
+
+	<div id="list"></div>
+
+
+
+
+
+	<script id="template" type="text/x-handlebars-template">
+		<div class="entry">
+			<h1>{{nome}}</h1>
+			<div class="body">
+				{{eta}}
+			</div>
+		</div>
+	</script>
 	<script src="js/script.js" charset="utf-8"></script>
 </body>
 
