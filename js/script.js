@@ -50,6 +50,7 @@ $(function () {
 
 	// utilizzo il for per ciclare l'array
 	for (let i = 0; i < classe16.length; i++) {
+
 		for (const key in classe16[i]) {
 			console.log(`${key} : ${classe16[i][key]} `);
 		}
@@ -59,27 +60,42 @@ $(function () {
 
 	// 3. inserisco un nuovo studente da prompt
 
-	let newName = prompt('Inserisci il nome studente: ');
+	/* let newName = prompt('Inserisci il nome studente: ');
 	let newSurn = prompt('Inserisci il cognome studente: ');
-	let newAge = prompt(`Inserisci l'età studente: `);
+	let newAge = prompt(`Inserisci l'età studente: `); */
 
-	classe16.push({
-		nome: newName,
-		cognome: newSurn,
-		eta: newAge
-	});
-
-	for (let i = 0; i < classe16.length; i++) {
-		for (const key in classe16[i]) {
-
-			$('#list').append(`<p>${key} : ${classe16[i][key]}</p>`);
+	/* 	classe16.push({
+			nome: newName,
+			cognome: newSurn,
+			eta: newAge
+		}); */
 
 
+
+
+	// 3.2 Acquisisco i dati da input
+
+	$('#inserisci').click(function () {
+
+		let newName = $('#nome').val();
+		let newSurn = $('#cognome').val();
+		let newAge = $('#eta').val();
+
+		classe16.push({
+			nome: newName,
+			cognome: newSurn,
+			eta: newAge
+		});
+
+		for (let i = 0; i < classe16.length; i++) {
+			$('#list').append('<br>');
+			for (const key in classe16[i]) {
+				$('#list').append(`<p>${key} : ${classe16[i][key]}</p>`);
+			}
 		}
-	}
 
+	})
 
-	// 3.2 
 
 
 
