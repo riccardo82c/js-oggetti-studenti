@@ -3,7 +3,54 @@ body {
 	color: rgb(226, 226, 212);
 }
 
+
+
+h1,
+h2 {
+	text-align: center;
+}
+
+.form {
+	font-size: 1.3em;
+	text-align: center;
+}
+
+.form input {
+	margin: 10px;
+	padding: 2.5px 5px;
+	border-radius: 5px;
+	background-color: #333;
+	color: rgb(226, 226, 212);
+	border: 1px solid rgb(226, 226, 212);
+}
+
+.form button {
+	padding: 5px 10px;
+	background-color: #333;
+	color: rgb(226, 226, 212);
+	border: 1px solid rgb(226, 226, 212);
+	border-radius: 10px;
+}
+
+.form button:active {
+
+	box-shadow: inset 1px 1px 3px black;
+}
+
+.form button:hover {
+	background-color: rgb(226, 226, 212);
+	color: #333;
+
+}
+
 .container {
 	display: flex;
 	justify-content: space-around;
+}
+
+
+/*  */
+
+.entry {
+	background-color: rgb(56, 56, 56);
 }

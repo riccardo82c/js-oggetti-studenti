@@ -76,31 +76,48 @@ $(function () {
 		let newSurn = $('#cognome').val();
 		let newAge = $('#eta').val();
 
-		classe16.push({
-			nome: newName,
-			cognome: newSurn,
-			eta: newAge
-		});
 
-		for (let i = 0; i < classe16.length; i++) {
+		/* if per verificare che tutti i campi siano stati compilati */
+		if (newName == '' || newSurn == '' || newAge == '') {
+			$('#nome').val('');
+			$('#cognome').val('');
+			$('#eta').val('');
 
-			for (const key in classe16[i]) {
-				$('#list').append(`<p>${key} : ${classe16[i][key]}</p>`);
+		} else {
+
+
+
+			classe16.push({
+				nome: newName,
+				cognome: newSurn,
+				eta: newAge
+			});
+
+
+			$('#nome').val('');
+			$('#cognome').val('');
+			$('#eta').val('');
+
+			for (let i = 0; i < classe16.length; i++) {
+
+				for (const key in classe16[i]) {
+					$('#list').append(`<p>${key} : ${classe16[i][key]}</p>`);
+				}
+				$('#list').append('<br>');
 			}
-			$('#list').append('<br>');
+
+			/* BONUS */
+
+			var source = $('#template').html();
+			var template = Handlebars.compile(source);
+
+			for (let i = 0; i < classe16.length; i++) {
+				var html = template(classe16[i]);
+				$('#list-two').append(html);
+
+			}
 		}
 
-		/* BONUS */
-
-		var source = $('#template').html();
-		var template = Handlebars.compile(source);
-
-		for (let i = 0; i < classe16.length; i++) {
-			var html = template(classe16[i]);
-			$('#list-two').append(html);
-
-		}
-
-	})
+	});
 
 });

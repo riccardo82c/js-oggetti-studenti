@@ -17,14 +17,14 @@
 
 
 	<div class="form">
-		<label for="nomeIns">Nome</label>
+		<label for="nomeIns">Nome:</label>
 		<input type="text" id="nome" name="nomeIns" placeholder="Inserisci nome" required>
-		<label for="nomeIns">Cognome</label>
+		<label for="nomeIns">Cognome:</label>
 		<input type="text" id="cognome" name="nomeIns" placeholder="Inserisci cognome" required>
-		<label for="nomeIns">Età</label>
+		<label for="nomeIns">Età:</label>
 		<input type="text" id="eta" name="nomeIns" placeholder="Inserisci eta" required>
 
-		<button id="inserisci">Inserisci nuovo</button>
+		<button id="inserisci">Aggiorna</button>
 	</div>
 
 
@@ -34,26 +34,21 @@
 
 		<div id="list">
 			<h2>Without handlebars</h2>
+			<hr>
 		</div>
 
 
 		<div id="list-two">
 			<h2>With handlebars</h2>
+			<hr>
 		</div>
 
 	</div>
 
 
-
-
-
-
-
-
 	<script id="template" type="text/x-handlebars-template">
 		<ul class="entry">
 			<li>
-			
 			<h3>{{nome}} {{cognome}}</h3>
 			<h4>anni: {{eta}}</h4>
 			</li>
