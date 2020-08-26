@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"
 		integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw=="
@@ -17,12 +18,13 @@
 
 
 	<div class="form">
+
 		<label for="nomeIns">Nome:</label>
 		<input type="text" id="nome" name="nomeIns" placeholder="Inserisci nome" required>
 		<label for="nomeIns">Cognome:</label>
 		<input type="text" id="cognome" name="nomeIns" placeholder="Inserisci cognome" required>
 		<label for="nomeIns">Età:</label>
-		<input type="text" id="eta" name="nomeIns" placeholder="Inserisci eta" required>
+		<input type="text" id="eta" name="nomeIns" placeholder="Inserisci età" required>
 
 		<button id="inserisci">Aggiorna</button>
 	</div>
@@ -49,6 +51,7 @@
 	<script id="template" type="text/x-handlebars-template">
 		<ul class="entry">
 			<li>
+			
 			<h3>{{nome}} {{cognome}}</h3>
 			<h4>anni: {{eta}}</h4>
 			</li>
