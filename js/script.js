@@ -57,24 +57,19 @@ $(function () {
 	}
 
 
-
 	// 3. inserisco un nuovo studente da prompt
 
 	/* let newName = prompt('Inserisci il nome studente: ');
 	let newSurn = prompt('Inserisci il cognome studente: ');
 	let newAge = prompt(`Inserisci l'età studente: `); */
-
+	// e lo pusho nell'array 
 	/* 	classe16.push({
 			nome: newName,
 			cognome: newSurn,
 			eta: newAge
 		}); */
 
-
-
-
 	// 3.2 Acquisisco i dati da input
-
 	$('#inserisci').click(function () {
 
 		let newName = $('#nome').val();
@@ -88,42 +83,24 @@ $(function () {
 		});
 
 		for (let i = 0; i < classe16.length; i++) {
-			$('#list').append('<br>');
+
 			for (const key in classe16[i]) {
 				$('#list').append(`<p>${key} : ${classe16[i][key]}</p>`);
 			}
+			$('#list').append('<br>');
+		}
+
+		/* BONUS */
+
+		var source = $('#template').html();
+		var template = Handlebars.compile(source);
+
+		for (let i = 0; i < classe16.length; i++) {
+			var html = template(classe16[i]);
+			$('#list-two').append(html);
+
 		}
 
 	})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	/* bonus */
-
-
-	var source = $('#template').html();
-	var template = Handlebars.compile(source);
-
-	/* var context = {
-		title: "My New Post",
-		body: "This is my first post!"
-	}; */
-	var html = template(studente);
-
-	/* $('#list').append(html); */
-
-
-
 
 });
